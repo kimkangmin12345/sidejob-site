@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>부업 추천 테스트</title>
 <link rel="stylesheet" href="style.css">
@@ -19,8 +20,8 @@
 
 <p>1. 하루 몇 시간 가능?</p>
 <select id="time">
-<option value="online">1~2시간</option>
-<option value="offline">3~4시간</option>
+<option value="short">1~2시간</option>
+<option value="long">3~4시간</option>
 </select>
 
 <p>2. 집에서 일하고 싶은가?</p>
@@ -73,37 +74,42 @@
 
 function recommend(){
 
-let home=document.getElementById("home").value
-let people=document.getElementById("people").value
-let computer=document.getElementById("computer").value
-let writing=document.getElementById("writing").value
-let sell=document.getElementById("sell").value
+let home = document.getElementById("home").value
+let people = document.getElementById("people").value
+let computer = document.getElementById("computer").value
+let writing = document.getElementById("writing").value
+let sell = document.getElementById("sell").value
 
-let result=[]
+let result = ""
 
 if(home=="yes" && computer=="yes"){
-result.push("블로그 운영")
-result.push("데이터 라벨링")
+result += '<a href="blog.html"><button>블로그 운영</button></a><br><br>'
+result += '<a href="datalabel.html"><button>데이터 라벨링</button></a><br><br>'
 }
 
 if(people=="yes"){
-result.push("배달 부업")
+result += '<a href="delivery.html"><button>배달 부업</button></a><br><br>'
 }
 
 if(writing=="yes"){
-result.push("전자책 판매")
+result += '<a href="ebook.html"><button>전자책 판매</button></a><br><br>'
 }
 
 if(sell=="yes"){
-result.push("스마트스토어")
-result.push("중고거래")
+result += '<a href="smartstore.html"><button>스마트스토어</button></a><br><br>'
+result += '<a href="resell.html"><button>중고거래</button></a><br><br>'
 }
 
-document.getElementById("result").innerHTML="추천 부업: <br>"+result.join("<br>")
+if(result==""){
+result="추천할 부업이 없습니다. 다른 답변을 선택해보세요."
+}
+
+document.getElementById("result").innerHTML="<h3>추천 부업</h3><br>"+result
 
 }
 
 </script>
 
 </body>
+
 </html>
