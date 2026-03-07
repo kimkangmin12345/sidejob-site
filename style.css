@@ -1,82 +1,116 @@
 body{
 font-family: Arial;
-background:#f5f5f5;
 margin:0;
+background:#f5f5f5;
+font-size:18px;
 }
 
 header{
 background:#222;
 color:white;
-padding:20px;
 text-align:center;
+padding:20px;
 }
 
 nav{
 background:#444;
-padding:10px;
 text-align:center;
+padding:10px;
 }
 
 nav a{
 color:white;
 margin:10px;
 text-decoration:none;
-font-weight:bold;
+font-size:18px;
 }
 
 .container{
+max-width:1000px;
+margin:auto;
 padding:20px;
 }
 
-.category{
-margin-top:40px;
+h1{
+font-size:28px;
 }
 
-.cards{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
+h2{
+font-size:24px;
+margin-top:30px;
+}
+
+p{
+font-size:18px;
 }
 
 .card{
 background:white;
 padding:20px;
 border-radius:10px;
-width:220px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+margin:15px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+display:inline-block;
+width:280px;
+vertical-align:top;
 }
 
 .card h3{
-margin-top:0;
+font-size:22px;
 }
 
-.card button{
-background:#007bff;
-color:white;
+button{
+background:#2ecc71;
 border:none;
-padding:10px;
+padding:12px 20px;
+color:white;
+font-size:18px;
 border-radius:5px;
 cursor:pointer;
 }
 
-.card button:hover{
-background:#0056b3;
+button:hover{
+background:#27ae60;
 }
 
-.quizbox{
-background:white;
-padding:30px;
-border-radius:10px;
-margin-top:40px;
-text-align:center;
-}
-
-.quizbox button{
-background:#28a745;
-color:white;
-border:none;
-padding:15px 25px;
+select{
+padding:10px;
 font-size:18px;
-border-radius:8px;
-cursor:pointer;
+margin-top:5px;
+}
+
+/* 모바일 최적화 */
+
+@media (max-width:768px){
+
+body{
+font-size:20px;
+}
+
+h1{
+font-size:28px;
+}
+
+h2{
+font-size:26px;
+}
+
+.card{
+width:100%;
+margin-bottom:20px;
+font-size:20px;
+}
+
+button{
+width:100%;
+font-size:20px;
+padding:15px;
+}
+
+select{
+width:100%;
+font-size:20px;
+padding:12px;
+}
+
 }
