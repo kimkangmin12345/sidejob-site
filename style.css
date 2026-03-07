@@ -1,36 +1,82 @@
 body{
-font-family:Arial;
+font-family: Arial;
 background:#f5f5f5;
 margin:0;
-padding:0;
-text-align:center;
 }
 
 header{
 background:#222;
 color:white;
 padding:20px;
+text-align:center;
+}
+
+nav{
+background:#444;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
 }
 
 .container{
-margin:40px;
+padding:20px;
 }
 
-button{
-padding:10px 20px;
-margin:10px;
-font-size:16px;
-cursor:pointer;
-border:none;
+.category{
+margin-top:40px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+width:220px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-top:0;
+}
+
+.card button{
 background:#007bff;
 color:white;
+border:none;
+padding:10px;
 border-radius:5px;
+cursor:pointer;
 }
 
-button:hover{
+.card button:hover{
 background:#0056b3;
 }
 
-a{
-text-decoration:none;
+.quizbox{
+background:white;
+padding:30px;
+border-radius:10px;
+margin-top:40px;
+text-align:center;
+}
+
+.quizbox button{
+background:#28a745;
+color:white;
+border:none;
+padding:15px 25px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
 }
