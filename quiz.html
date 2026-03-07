@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>부업 추천</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>나에게 맞는 부업 찾기</h1>
+
+<form>
+
+<h3>초기 자본이 있나요?</h3>
+<input type="radio" name="money" value="yes">있다
+<input type="radio" name="money" value="no">없다
+
+<h3>밖에서 일 가능한가요?</h3>
+<input type="radio" name="outdoor" value="yes">가능
+<input type="radio" name="outdoor" value="no">집에서
+
+<h3>글쓰기 가능한가요?</h3>
+<input type="radio" name="write" value="yes">가능
+<input type="radio" name="write" value="no">싫다
+
+<br><br>
+
+<button type="button" onclick="recommend()">추천받기</button>
+
+</form>
+
+<h2 id="result"></h2>
+
+<script>
+
+function recommend(){
+
+let money=document.querySelector('input[name="money"]:checked').value
+let outdoor=document.querySelector('input[name="outdoor"]:checked').value
+let write=document.querySelector('input[name="write"]:checked').value
+
+let result=""
+
+if(outdoor=="yes" && money=="yes"){
+result="추천 부업: 배달 라이더"
+}
+
+else if(write=="yes"){
+result="추천 부업: 블로그 운영"
+}
+
+else if(money=="yes"){
+result="추천 부업: 중고거래"
+}
+
+else{
+result="추천 부업: SNS 계정 운영"
+}
+
+document.getElementById("result").innerText=result
+
+}
+
+</script>
+
+<br><br>
+
+<a href="index.html"><button>홈으로</button></a>
+
+</body>
+</html>
