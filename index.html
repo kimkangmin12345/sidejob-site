@@ -295,43 +295,101 @@ updateJobs()
 
 </section>
 
-<section class="sidejob-section">
+<section class="category">
 
 <h2>🟢 초보 추천 부업</h2>
 
-<div class="card-container">
+<div class="cards">
 
-<div class="card"><h3>설문조사</h3><p>설문 참여하고 포인트 받기</p></div>
+<div class="card" data-type="online">
+<h3>설문조사</h3>
+<p>설문 참여하고 포인트 받기</p>
+<p>💰 월 수익 : 1~10만원</p>
+<p>📈 난이도 : 매우 쉬움</p>
+<a href="survey.html"><button>보기</button></a>
+</div>
 
-<div class="card"><h3>앱 테스트</h3><p>앱 사용 후 리뷰 작성</p></div>
+<div class="card" data-type="online">
+<h3>앱 테스트</h3>
+<p>앱 사용 후 리뷰 작성</p>
+<p>💰 월 수익 : 5~50만원</p>
+<p>📈 난이도 : 쉬움</p>
+<a href="apptest.html"><button>보기</button></a>
+</div>
 
-<div class="card"><h3>중고거래</h3><p>안 쓰는 물건 판매</p></div>
+<div class="card" data-type="online">
+<h3>데이터 라벨링</h3>
+<p>AI 데이터 분류 작업</p>
+<p>💰 월 수익 : 10~100만원</p>
+<p>📈 난이도 : 쉬움</p>
+<a href="datalabel.html"><button>보기</button></a>
+</div>
 
-<div class="card"><h3>데이터 라벨링</h3><p>간단한 데이터 분류 작업</p></div>
+<div class="card" data-type="sell">
+<h3>중고거래</h3>
+<p>안 쓰는 물건 판매</p>
+<p>💰 월 수익 : 5~50만원</p>
+<p>📈 난이도 : 쉬움</p>
+<a href="resell.html"><button>보기</button></a>
+</div>
 
-<div class="card"><h3>PDF 템플릿 판매</h3><p>간단한 디자인 파일 판매</p></div>
+<div class="card" data-type="content">
+<h3>블로그</h3>
+<p>글 작성 후 광고 수익</p>
+<p>💰 월 수익 : 0~100만원</p>
+<p>📈 난이도 : 중간</p>
+<a href="blog.html"><button>보기</button></a>
+</div>
 
 </div>
 
 </section>
 
-<section class="sidejob-section">
+<section class="category">
 
 <h2>💰 월100 가능 부업</h2>
 
-<div class="card-container">
+<div class="cards">
 
-<div class="card"><h3>스마트스토어</h3><p>온라인 쇼핑몰 운영</p></div>
+<div class="card" data-type="sell">
+<h3>스마트스토어</h3>
+<p>온라인 쇼핑몰 운영</p>
+<p>💰 월 수익 : 50~500만원</p>
+<p>📈 난이도 : 중간</p>
+<a href="smartstore.html"><button>보기</button></a>
+</div>
 
-<div class="card"><h3>쿠팡파트너스</h3><p>제휴마케팅 수익</p></div>
+<div class="card" data-type="sell">
+<h3>쿠팡 파트너스</h3>
+<p>상품 추천 수익</p>
+<p>💰 월 수익 : 10~300만원</p>
+<p>📈 난이도 : 중간</p>
+<a href="coupang.html"><button>보기</button></a>
+</div>
 
-<div class="card"><h3>블로그</h3><p>애드센스 광고 수익</p></div>
+<div class="card" data-type="content">
+<h3>전자책 판매</h3>
+<p>PDF 제작 후 판매</p>
+<p>💰 월 수익 : 20~500만원</p>
+<p>📈 난이도 : 중간</p>
+<a href="ebook.html"><button>보기</button></a>
+</div>
 
-<div class="card"><h3>유튜브</h3><p>영상 광고 수익</p></div>
+<div class="card" data-type="content">
+<h3>SNS 운영</h3>
+<p>계정 성장 후 광고 수익</p>
+<p>💰 월 수익 : 10~500만원</p>
+<p>📈 난이도 : 중간</p>
+<a href="sns.html"><button>보기</button></a>
+</div>
 
-<div class="card"><h3>전자책 판매</h3><p>디지털 콘텐츠 판매</p></div>
-
-<div class="card"><h3>온라인 강의</h3><p>지식 강의 판매</p></div>
+<div class="card" data-type="content">
+<h3>영상 편집</h3>
+<p>유튜브 영상 편집 작업</p>
+<p>💰 월 수익 : 50~300만원</p>
+<p>📈 난이도 : 중간</p>
+<a href="videoedit.html"><button>보기</button></a>
+</div>
 
 </div>
 
@@ -347,4 +405,39 @@ updateJobs()
 <a href="about.html">사이트 소개</a>
 </nav>
 
-</html>
+<div>
+
+<button onclick="filterMoney('all')">전체</button>
+<button onclick="filterMoney('10')">월10+</button>
+<button onclick="filterMoney('50')">월50+</button>
+<button onclick="filterMoney('100')">월100+</button>
+
+</div>
+
+<script>
+
+function filterMoney(amount){
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+let money = card.getAttribute("data-money");
+
+if(amount === "all"){
+card.style.display = "block";
+}
+
+else if(money >= amount){
+card.style.display = "block";
+}
+
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+</script>
