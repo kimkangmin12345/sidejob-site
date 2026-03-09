@@ -406,38 +406,3 @@ updateJobs()
 </nav>
 
 <div>
-
-<button onclick="filterMoney('all')">전체</button>
-<button onclick="filterMoney('10')">월10+</button>
-<button onclick="filterMoney('50')">월50+</button>
-<button onclick="filterMoney('100')">월100+</button>
-
-</div>
-
-<script>
-
-function filterMoney(amount){
-
-let cards = document.querySelectorAll(".card");
-
-cards.forEach(card => {
-
-let money = card.getAttribute("data-money");
-
-if(amount === "all"){
-card.style.display = "block";
-}
-
-else if(money >= amount){
-card.style.display = "block";
-}
-
-else{
-card.style.display = "none";
-}
-
-});
-
-}
-
-</script>
