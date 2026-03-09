@@ -128,4 +128,23 @@ font-size:22px;
 padding:16px;
 }
 
+}.sidejob-section{
+margin:40px 0;
+}
+
+.sidejob-section h2{
+margin-bottom:20px;
+}
+
+.card-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+border:1px solid #ddd;
+padding:20px;
+border-radius:10px;
+width:200px;
 }
