@@ -1,34 +1,102 @@
-<div class="card" data-type="offline">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배달 부업</title>
 
-<h3>배달 부업</h3>
-<p>배달앱으로 돈 벌기</p>
+<style>
+
+body{
+font-family:Arial;
+background:#f5f5f5;
+text-align:center;
+padding:20px;
+}
+
+.card{
+background:white;
+max-width:400px;
+margin:auto;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.info{
+margin-top:10px;
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.income{
+background:#e8f9f0;
+color:#27ae60;
+padding:6px 10px;
+border-radius:6px;
+font-weight:bold;
+}
+
+.level{
+background:#f2f2f2;
+color:#555;
+padding:6px 10px;
+border-radius:6px;
+}
+
+button{
+margin-top:10px;
+padding:10px 15px;
+border:none;
+border-radius:8px;
+background:#3498db;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#2980b9;
+}
+
+.home{
+background:#777;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<h2>배달 부업</h2>
+
+<p>배달앱으로 음식 배달을 하면서 수익을 얻는 부업입니다.</p>
 
 <div class="info">
 <span class="income">💰 월 수익: 50~300만원</span>
 <span class="level">📈 난이도: 중간</span>
 </div>
 
-<a href="delivery.html">
-<button>보기</button>
-</a>
-
-</div>
-
-<br><br>
+<br>
 
 <a href="https://connect.baemin.com" target="_blank">
 <button>배민커넥트 가입하기</button>
 </a>
 
-<br>
-
 <a href="https://coupa.ng/partners" target="_blank">
 <button>쿠팡이츠 배달파트너 가입하기</button>
 </a>
 
-<br><br>
+<br>
 
-<a href="index.html"><button>홈으로</button></a>
+<a href="index.html">
+<button class="home">홈으로</button>
+</a>
+
+</div>
 
 </body>
 </html>
