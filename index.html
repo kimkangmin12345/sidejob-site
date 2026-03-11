@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-<title>부업 찾기 사이트</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
 <header>
-<h1>현실적인 부업 모음</h1>
-<p>나에게 맞는 부업을 찾아보세요</p>
+
+<h1>세상의 모든 부업</h1>
+<p>현실적으로 돈 되는 부업 추천 정보 사이트</p>
+
 </header>
+<button class="moneyButton" onclick="clickMoney()">💰 돈 버튼</button>
+
+<button class="moneyButton" onclick="clickMoney()">💰 돈 버튼</button>
 
 <nav>
 <a href="index.html">홈</a>
@@ -397,6 +394,81 @@ updateJobs()
 <footer class="footer">
 <p>© 2026 부업 찾기 사이트</p>
 </footer>
+
+<script>
+
+let clickCount = 0;
+
+function clickMoney(){
+
+clickCount++;
+
+if(clickCount >= 5){
+
+startMoneyRain();
+clickCount = 0;
+
+}
+
+}
+
+function startMoneyRain(){
+
+for(let i=0;i<40;i++){
+
+let money = document.createElement("div");
+
+money.className="money";
+money.innerHTML="💸";
+money.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(money);
+
+setTimeout(()=>{
+
+money.remove();
+
+},4000);
+
+}
+
+}
+
+</script>
+
+</body>
+<script>
+
+let clickCount = 0;
+
+function clickMoney(){
+
+clickCount++;
+
+if(clickCount >= 5){
+
+for(let i=0;i<40;i++){
+
+let money = document.createElement("div");
+money.className="money";
+money.innerHTML="💸";
+money.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(money);
+
+setTimeout(()=>{
+money.remove();
+},4000);
+
+}
+
+clickCount = 0;
+
+}
+
+}
+
+</script>
 </body>
 
 <nav>
