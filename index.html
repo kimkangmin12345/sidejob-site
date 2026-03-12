@@ -89,6 +89,20 @@ onkeyup="searchJob()"
 <a href="datalabel.html"><button>보기</button></a>
 </div>
 
+<div class="sidejob-card">
+<h3>뉴스 요약 콘텐츠 제작</h3>
+<p>💰 월 수익: 10~200만원</p>
+<p>📈 난이도: 낮음</p>
+<button onclick="showJob('news')">보기</button>
+</div>
+
+<div class="sidejob-card">
+<h3>SEO 글쓰기</h3>
+<p>💰 월 수익: 50~400만원</p>
+<p>📈 난이도: 중</p>
+<button onclick="showJob('seo')">보기</button>
+</div>
+
 <div class="card" data-type="online">
 <h3>설문조사</h3>
 <p>설문 참여하고 돈 받기</p>
@@ -129,9 +143,49 @@ onkeyup="searchJob()"
 </section>
 
 <section class="category">
-<h2>🛒 판매 부업</h2>
+<h2>🤖 AI 부업<h2>
+
+<div class="sidejob-card">
+<h3>AI 챗봇 제작</h3>
+<p>💰 월 수익: 50~500만원</p>
+<p>📈 난이도: 중</p>
+<button onclick="showJob('chatbot')">보기</button>
+</div>
+
+<div class="sidejob-card">
+<h3>AI 챗봇 제작</h3>
+<p>💰 월 수익: 50~500만원</p>
+<p>📈 난이도: 중</p>
+<button onclick="showJob('chatbot')">보기</button>
+</div>
+
+<div class="sidejob-card">
+<h3>AI 음성 더빙 제작</h3>
+<p>💰 월 수익: 20~300만원</p>
+<p>📈 난이도: 낮음</p>
+<button onclick="showJob('voice')">보기</button>
+</div>
+
+</section>
+
+<section class="category">
+<h2>판매 부업<h2>
 
 <div class="cards">
+
+<div class="sidejob-card">
+<h3>도메인 판매</h3>
+<p>💰 월 수익: 0~1000만원</p>
+<p>📈 난이도: 중</p>
+<button onclick="showJob('domain')">보기</button>
+</div>
+
+<div class="sidejob-card">
+<h3>도메인 판매</h3>
+<p>💰 월 수익: 0~1000만원</p>
+<p>📈 난이도: 중</p>
+<button onclick="showJob('domain')">보기</button>
+</div>
 
 <div class="card" data-type="sell">
 <h3>중고거래</h3>
@@ -166,6 +220,13 @@ onkeyup="searchJob()"
 <h2>🎨 콘텐츠 제작</h2>
 
 <div class="cards">
+
+<div class="sidejob-card">
+<h3>유튜브 썸네일 제작</h3>
+<p>💰 월 수익: 30~400만원</p>
+<p>📈 난이도: 중</p>
+<button onclick="showJob('thumb')">보기</button>
+</div>
 
 <div class="card" data-type="content">
 <h3>블로그</h3>
@@ -342,6 +403,7 @@ clickCount = 0;
 }
 
 </script>
+
 <script>
 
 function recommendSide(){
@@ -383,6 +445,97 @@ let monthly = daily * 30
 
 document.getElementById("incomeResult").innerText =
 "👉 예상 월 수익: " + monthly.toLocaleString() + "원"
+
+}
+
+</script>
+<script>
+
+function showJob(job){
+
+let detail="";
+
+if(job=="web"){
+detail=`<h3>웹사이트 제작 대행</h3>
+<p>기업이나 개인에게 홈페이지를 제작해주고 돈을 버는 부업입니다.</p>
+<a href="https://www.fiverr.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="aiwrite"){
+detail=`<h3>AI 글 작성 대행</h3>
+<p>ChatGPT 등을 활용해 블로그 글이나 상품 설명을 대신 작성해주는 부업입니다.</p>
+<a href="https://www.upwork.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="seo"){
+detail=`<h3>SEO 글쓰기</h3>
+<p>구글 검색에 잘 노출되는 글을 작성하는 부업입니다.</p>
+<a href="https://www.fiverr.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="news"){
+detail=`<h3>뉴스 요약 콘텐츠 제작</h3>
+<p>뉴스 내용을 요약해서 SNS나 블로그 콘텐츠로 만드는 부업입니다.</p>
+<a href="https://medium.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="notion"){
+detail=`<h3>노션 템플릿 판매</h3>
+<p>노션 생산성 템플릿을 만들어 판매하는 부업입니다.</p>
+<a href="https://gumroad.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="thumb"){
+detail=`<h3>유튜브 썸네일 제작</h3>
+<p>유튜버를 위해 썸네일 이미지를 제작해주는 디자인 부업입니다.</p>
+<a href="https://www.fiverr.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="domain"){
+detail=`<h3>도메인 판매</h3>
+<p>좋은 도메인을 미리 구매해 비싸게 판매하는 방식입니다.</p>
+<a href="https://www.godaddy.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="flip"){
+detail=`<h3>웹사이트 판매</h3>
+<p>사이트를 만들어 트래픽을 모은 후 판매하는 방식입니다.</p>
+<a href="https://flippa.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="voice"){
+detail=`<h3>AI 음성 더빙 제작</h3>
+<p>AI 음성 기술을 이용해 영상 더빙 작업을 하는 부업입니다.</p>
+<a href="https://elevenlabs.io" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+if(job=="chatbot"){
+detail=`<h3>AI 챗봇 제작</h3>
+<p>쇼핑몰이나 사이트에 챗봇을 만들어 판매하는 부업입니다.</p>
+<a href="https://manychat.com" target="_blank">
+<button>가입하고 시작하기</button>
+</a>`;
+}
+
+document.getElementById("jobDetail").innerHTML=detail;
 
 }
 
